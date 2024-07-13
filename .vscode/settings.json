@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\user1\\Envs\\my_django_environment\\Scripts\\python.exe",
+  "python.analysis.extraPaths": [
+    "C:\\Users\\user1\\Envs\\my_django_environment\\Lib\\site-packages",
+    "${workspaceFolder}"
+  ],
+  "python.terminal.activateEnvironment": true
+}

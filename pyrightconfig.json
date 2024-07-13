@@ -1,0 +1,5 @@
+{
+  "venvPath": "C:\\Users\\user1\\Envs",
+  "venv": "my_django_environment",
+  "extraPaths": [".", ".\\catalog"]
+}
