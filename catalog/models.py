@@ -42,6 +42,7 @@ class Language(models.Model):
         """Returns the url to access a particular language instance."""
         return reverse('language-detail', args=[str(self.id)])
 
+    
     def __str__(self):
         """String for representing the Model object (in Admin site etc.)"""
         return self.name
