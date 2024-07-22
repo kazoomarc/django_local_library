@@ -4,5 +4,8 @@
     "C:\\Users\\user1\\Envs\\my_django_environment\\Lib\\site-packages",
     "${workspaceFolder}"
   ],
-  "python.terminal.activateEnvironment": true
+  "python.terminal.activateEnvironment": true,
+  "editor.defaultFormatter": "batisteo.vscode-django",
+  "editor.formatOnSave": true,
+  "python.analysis.typeCheckingMode": "basic"
 }
