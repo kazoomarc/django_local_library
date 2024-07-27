@@ -27,7 +27,7 @@ class Genre(models.Model):
 
     def get_absolute_url(self):
         """Returns the url to access a particular genre instance."""
-        return reverse("genre-detail", args=[str(self.id)])
+        return reverse("genre-detail", args=[str(self.id)])  # type: ignore
 
     class Meta:
         constraints = [
@@ -50,7 +50,7 @@ class Language(models.Model):
 
     def get_absolute_url(self):
         """Returns the url to access a particular language instance."""
-        return reverse("language-detail", args=[str(self.id)])
+        return reverse("language-detail", args=[str(self.id)])  # type: ignore
 
     def __str__(self):
         """String for representing the Model object (in Admin site etc.)"""
@@ -103,7 +103,7 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         """Returns the URL to access a detail record for this book."""
-        return reverse("book-detail", args=[str(self.id)])
+        return reverse("book-detail", args=[str(self.id)])  # type: ignore
 
 
 class BookInstance(models.Model):
@@ -144,10 +144,11 @@ class BookInstance(models.Model):
 
     class Meta:
         ordering = ["due_back"]
+        permissions = (("can_mark_returned", "Set book as returned"),)
 
     def __str__(self):
         """String for representing the Model object."""
-        return f"{self.id} ({self.book.title})"
+        return f"{self.id} ({self.book.title})"  # type: ignore
 
 
 class Author(models.Model):
@@ -156,14 +157,14 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField("Died", null=True, blank=True)
+    date_of_death = models.DateField("died", null=True, blank=True)
 
     class Meta:
         ordering = ["last_name", "first_name"]
 
     def get_absolute_url(self):
         """Returns the URL to access a particular author instance."""
-        return reverse("author-detail", args=[str(self.id)])
+        return reverse("author-detail", args=[str(self.id)])  # type: ignore
 
     def __str__(self):
         """String for representing the Model object."""
